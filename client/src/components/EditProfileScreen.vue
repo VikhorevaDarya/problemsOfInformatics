@@ -14,16 +14,19 @@
         </div>
         <div class="profile__main-data">
           <input
+            v-bind:value="name"
             class="profile__input"
             placeholder="Имя"
             @input="name = $event.target.value"
           />
           <input
+            v-bind:value="surname"
             class="profile__input"
             placeholder="Фамилия"
             @input="surname = $event.target.value"
           />
           <input
+            v-bind:value="patronymic"
             class="profile__input"
             placeholder="Отчество"
             @input="patronymic = $event.target.value"
@@ -33,11 +36,13 @@
       <div class="profile__subtitle">Образование</div>
       <div class="profile__education">
         <input
+          v-bind:value="education"
           class="profile__input profile__input_long"
           placeholder="Наименование учреждения"
           @input="education = $event.target.value"  
         />
          <input
+            v-bind:value="specialityCode"
             class="profile__input profile__input_long"
             placeholder="Код специальности"
             @input="specialityCode = $event.target.value"
@@ -46,16 +51,19 @@
       <div class="profile__subtitle">Адрес</div>
       <div class="profile__data">
         <input
+          v-bind:value="city"
           class="profile__input profile__input_long"
           placeholder="Город"
           @input="city = $event.target.value"
           />
         <input
+          v-bind:value="adress"
           class="profile__input profile__input_long"
           placeholder="Адрес"
           @input="adress = $event.target.value"
         />
         <input
+          v-bind:value="posteCode"
           class="profile__input profile__input_long"
           placeholder="Почтовый индекс"
           @input="posteCode = $event.target.value"  
@@ -64,16 +72,19 @@
       <div class="profile__subtitle">Работа</div>
       <div class="profile__education">
         <input
+          v-bind:value="work"
           class="profile__input profile__input_long"
           placeholder="Место работы"
           @input="work = $event.target.value"   
         />
         <input
+          v-bind:value="position"
           class="profile__input profile__input_long"
           placeholder="Должность"
           @input="position = $event.target.value" 
         />
         <input
+          v-bind:value="academicDegree"
           class="profile__input profile__input_long"
           placeholder="Ученая степень"
           @input="academicDegree = $event.target.value" 
@@ -99,17 +110,17 @@ export default {
   data: function() {
     return {
       author: {
-        name: '',
-        surname: '',
-        patronymic: '',
-        city: '',
-        adress: '',
-        posteCode: '',
-        education: '',
-        specialityCode: '',
-        work: '',
-        position: '',
-        academicDegree: ''
+        name: "",
+        surname: "",
+        patronymic: "",
+        city: "",
+        adress: "",
+        posteCode: "",
+        education: "",
+        specialityCode: "",
+        work: "",
+        position: "",
+        academicDegree: ""
       }
     }
   },
