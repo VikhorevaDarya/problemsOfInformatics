@@ -42,10 +42,10 @@
           @input="education = $event.target.value"  
         />
          <input
-            v-bind:value="specialityCode"
+            v-bind:value="specialtyCode"
             class="profile__input profile__input_long"
             placeholder="Код специальности"
-            @input="specialityCode = $event.target.value"
+            @input="specialtyCode = $event.target.value"
           />
       </div>
       <div class="profile__subtitle">Адрес</div>
@@ -117,7 +117,7 @@ export default {
         adress: "",
         posteCode: "",
         education: "",
-        specialityCode: "",
+        specialtyCode: "",
         work: "",
         position: "",
         academicDegree: ""
@@ -132,9 +132,9 @@ export default {
        this.patronymic,
        this.city,
        this.adress,
-       this.postecode,
+       this.posteCode,
        this.education,
-       this.specialityCode,
+       this.specialtyCode,
        this.work,
        this.position,
        this.academicDegree

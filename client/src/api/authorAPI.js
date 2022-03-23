@@ -9,7 +9,7 @@ export const addAuthor = async(
   adress,
   posteCode,
   education,
-  specialityCode,
+  specialtyCode,
   work,
   position,
   academicDegree
@@ -24,7 +24,7 @@ export const addAuthor = async(
           adress,
           posteCode,
           education,
-          specialityCode,
+          specialtyCode,
           work,
           position,
           academicDegree
