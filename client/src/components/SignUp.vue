@@ -16,6 +16,8 @@
 
 <script>
 import {addUser} from "@/api/userAPI";
+import store from '../store.js'
+
 export default {
   name: 'SignUp',
   data(){
@@ -24,18 +26,35 @@ export default {
         name:"",
         surname:"",
         email:"",
-        password:""
-      }
+        password:"",
+        id: ""
+      },
+      store: store
     }
   },
   methods:{
     createUser(){
-      addUser(this.name,this.surname,this.email,this.password).then((response)=>{
-        console.log(response.data)
-        if (response.data){
-          window.location.href = 'http://localhost:8080/#/LogIn';
-        }
+      let user = {}
+      addUser(this.name,this.surname,this.email,this.password).then((response) =>{
+        return response.data
+      }).then(data => {
+        return user = { ...data }
+      }).then(() => {
+        console.log(user)
+      }).then(() => {
+        this.user.name = user.name
+        this.user.surname = user.surname
+        this.user.email = user.email
+        this.user.password = user.password
+        this.user.id = user.id
       })
+      if (user){
+        window.location.href = 'http://localhost:8080/#/LogIn';
+        this.store.commit('set', {
+        user: this.user
+      })
+      console.log(store.state.user)
+      }
     }
 
 }}
