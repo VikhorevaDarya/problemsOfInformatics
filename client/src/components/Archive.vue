@@ -6,230 +6,250 @@
           <div class="archive__container">
             <span @click=" visible2022 = ! visible2022" class="container__title">2022</span>
             <div v-if=" visible2022" class="container">
-              <div class="container__item">
-              № 1(54)
-            </div>
-            <div class="container__item">
-              № 2(55)
-            </div>
-            <div class="container__item">
-              № 3(56)
-            </div>
-            <div class="container__item">
-              № 4(57)
-            </div>
+              <a class="container__href" href="#pdf">
+                <div @click="showPdf" class="container__item">
+                № 1 (54)
+                </div>
+              </a>
+              <a class="container__href" href="#pdf">
+                <div @click="showPdf" class="container__item">
+                № 2 (55)
+                </div>
+              </a>
+              <a class="container__href" href="#pdf">
+                <div @click="showPdf" class="container__item">
+                № 3 (56)
+                </div>
+              </a>
+              <a class="container__href" href="#pdf">
+                <div @click="showPdf" class="container__item">
+                № 4 (57)
+                </div>
+              </a>
           </div>
           <span @click=" visible2021 = ! visible2021" class="container__title">2021</span>
             <div v-if=" visible2021" class="container">
-              <div class="container__item">
-              № 1(50) электронная версия
-              </div>
-              <div class="container__item">
-                № 2(51) электронная версия
-              </div>
-              <div class="container__item">
-                № 3(52) электронная версия
-              </div>
-              <div class="container__item">
-                № 4(53)
-              </div>
+              <a class="container__href" href="#pdf">
+                <div @click="showPdf" class="container__item">
+                № 1(50) электронная версия
+                </div>
+              </a>
+              <a class="container__href" href="#pdf">
+                <div @click="showPdf" class="container__item">
+                  № 2(51) электронная версия
+                </div>
+              </a>
+              <a class="container__href" href="#pdf">
+                <div @click="showPdf" class="container__item">
+                  № 3(52) электронная версия
+                </div>
+              </a>
+              <a class="container__href" href="#pdf">
+                <div @click="showPdf" class="container__item">
+                  № 4(53)
+                </div>
+              </a>
             </div>
           <span @click=" visible2020 = ! visible2020" class="container__title">2020</span>
           <div v-if=" visible2020" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1(46) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2(47) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3(48) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4(49) электронная версия
               </div>
           </div>
           <span @click=" visible2019 = ! visible2019" class="container__title">2019</span>
           <div v-if=" visible2019" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1(42) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2(43) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3(44) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4(45) электронная версия
               </div>
           </div>
           <span @click="visible2018 = !visible2018" class="container__title">2018</span>
           <div v-if="visible2018" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1 (38) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2 (39) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3 (40) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4 (41) электронная версия
               </div>
           </div>
           <span @click="visible2017 = !visible2017" class="container__title">2017</span>
           <div v-if="visible2017" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1 (34) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2 (35) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3 (36) электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4 (37) электронная версия
               </div>
           </div>
           <span @click="visible2016 = !visible2016" class="container__title">2016</span>
           <div v-if="visible2016" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1 (30)  электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2 (31)  электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3 (32)  электронная версия
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4 (33)  электронная версия
               </div>
           </div>
           <span @click="visible2015 = !visible2015" class="container__title">2015</span>
           <div v-if="visible2015" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1 (26)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2 (27)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3 (28)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4 (29)
               </div>
           </div>
           <span @click="visible2014 = !visible2014" class="container__title">2014</span>
           <div v-if="visible2014" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1 (22)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2 (23)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3 (24)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4 (25)
               </div>
           </div>
           <span @click="visible2013 = !visible2013" class="container__title">2013</span>
           <div v-if="visible2013" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1 (18)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2 (19)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3 (20)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4 (21)
               </div>
           </div>
           <span @click="visible2012 = !visible2012" class="container__title">2012</span>
           <div v-if="visible2012" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1 (13)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2 (14)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3 (15)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4 (16)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 Спецвыпуск (17)
               </div>
           </div>
           <span @click="visible2011 = !visible2011" class="container__title">2011</span>
           <div v-if="visible2011" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1 (9)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2 (10)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3 (11)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4 (12)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 Спецвыпуск
               </div>
           </div>
           <span @click="visible2010 = !visible2010" class="container__title">2010</span>
           <div v-if="visible2010" class="container">
-              <div class="container__item">
+              <a class="container__href" href="#pdf">
+                <div @click="showPdf" class="container__item">
                 № 1 (5)
-              </div>
-              <div class="container__item">
+                </div>
+              </a>
+              <div @click="showPdf" class="container__item">
                 № 2 (6)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3 (7)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4 (8)
               </div>
           </div>
           <span @click="visible2009 = !visible2009" class="container__title">2009</span>
           <div v-if="visible2009" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1 (2)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 2 (3)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 3 (4)
               </div>
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 4 Спецвыпуск
               </div>
           </div>
           <span @click="visible2008 = !visible2008" class="container__title">2008</span>
           <div v-if="visible2008" class="container">
-              <div class="container__item">
+              <div @click="showPdf" class="container__item">
                 № 1 (5)
               </div>
           </div>
           </div>
         </div>
     </div>
-    <ReadingPdf />
+    <a name="pdf" v-if="isShowPdf" class="reading-pdf">
+      <ReadingPdf />
+    </a>
     <Footer />
   </div>
 </template>
@@ -256,7 +276,8 @@ export default {
       visible2011: false,
       visible2010: false,
       visible2009: false,
-      visible2008: false
+      visible2008: false,
+      isShowPdf: false
     }
   },
   components: {
@@ -267,6 +288,11 @@ export default {
       lang() {
           return this.$store.state.lang
       }
+  },
+  methods: {
+    showPdf() {
+      this.isShowPdf = true
+    }
   }
 }
 </script>
@@ -302,6 +328,9 @@ export default {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  &__href {
+    text-decoration: none;
+  }
   &__title {
     .title-big-bold();
     width: 100%;
