@@ -229,12 +229,14 @@
           </div>
         </div>
     </div>
+    <ReadingPdf />
     <Footer />
   </div>
 </template>
 
 <script>
 import Footer from './Footer.vue'
+import ReadingPdf from './ReadingPdf'
 
 export default {
   name: 'archive',
@@ -258,7 +260,13 @@ export default {
     }
   },
   components: {
-    Footer
+    Footer,
+    ReadingPdf
+  },
+  computed: {
+      lang() {
+          return this.$store.state.lang
+      }
   }
 }
 </script>

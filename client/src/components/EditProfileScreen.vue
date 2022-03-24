@@ -5,6 +5,7 @@
       <router-link class="menu__item" to="/MyProfileScreen">Мой профиль</router-link>
       <div class="menu__item">Мои статьи</div>
       <div class="menu__item menu__item_checked">Редактировать профиль</div>
+      <a href="#openModal" class="menu__item">Выйти из профиля</a>
     </div>
     <div class="profile__container">
       <div class="profile__avatar-and-data">
@@ -94,6 +95,7 @@
     </div>
   </div>
   <Footer />
+  <div class="modal-window"><ModalWindow /></div>
 </div>
   
 </template>
@@ -101,11 +103,13 @@
 <script>
 import Footer from './Footer.vue'
 import {addAuthor} from "@/api/authorAPI"
+import ModalWindow from './ModalWindow.vue'
 
 export default {
   name: 'EditProfileScreen',
   components: {
-    Footer
+    Footer,
+    ModalWindow
   },
   data: function() {
     return {
@@ -144,6 +148,9 @@ export default {
           window.location.href = 'http://localhost:8080/#/MyProfileScreen';
         }
       })
+    },
+    logOut() {
+      alert('Вы уверены, что хотите выйти из профиля?')
     }
   }
 }
@@ -258,5 +265,8 @@ export default {
     }
     }
   }
+.modal-window {
+  position: absolute;
+}
 </style>
 

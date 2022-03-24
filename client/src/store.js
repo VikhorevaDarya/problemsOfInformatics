@@ -19,7 +19,8 @@ export default new Vuex.Store({
         placeOfWork: '',
         workPosition: '',
         academicDegree: ''
-      }
+      },
+      jwt: ''
     }
   },
   mutations: {

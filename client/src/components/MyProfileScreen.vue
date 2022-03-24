@@ -5,6 +5,7 @@
       <div class="menu__item menu__item_checked">Мой профиль</div>
       <div class="menu__item">Мои статьи</div>
       <router-link class="menu__item" to="/EditProfileScreen">Редактировать профиль</router-link>
+      <a href="#openModal" class="menu__item">Выйти из профиля</a>
     </div>
     <div class="profile__container">
       <div class="profile__avatar-and-data">
@@ -28,17 +29,20 @@
       </div>
     </div>
   </div>
+  <ModalWindow />
   <Footer />
 </div>
 </template>
 
 <script>
 import Footer from './Footer.vue'
+import ModalWindow from './ModalWindow'
 
 export default {
   name: 'MyEditProfileScreen',
   components: {
-    Footer
+    Footer,
+    ModalWindow
   },
   computed: {
       user() {

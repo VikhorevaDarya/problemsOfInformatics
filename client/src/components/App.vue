@@ -24,12 +24,17 @@
             @click="changeLangItem"
             v-text="lang">
           </li>
-          <li class="user-logo" @mouseover="flag=true">
-          <router-link class="navigation__item_text" to="/MyProfileScreen"><ProfileIcon /></router-link>
+          <li v-if="!isLogedIn" class="user-logo" @mouseover="flag=true">
+          <ProfileIcon />
+          </li>
+          <li v-if="isLogedIn" class="user-logo" @mouseover="flag=true">
+          <router-link class="navigation__item_text" to="/MyProfileScreen">
+            <img class="loged-in-user" src="../assets/img/default-user.jpg">
+          </router-link>
           </li>
         </ul>
       </nav>
-      <div @mouseleave="toggleFlag"><Authorization v-if="flag"/></div>
+      <div v-if="!isLogedIn" @mouseleave="toggleFlag"><Authorization v-if="flag"/></div>
     </div>
     <router-view></router-view>
   </div>
@@ -50,7 +55,8 @@ export default {
     return {
       flag: false,
       lang: 'EN',
-      store: store
+      store: store,
+      isLogedIn: localStorage.getItem('SavedToken')
     }
   },
   methods: {
@@ -74,6 +80,9 @@ document.title = 'Проблемы информатики'
 </script>
 
 <style lang="less" scoped>
+@import '../utils/const.less';
+@import '../utils/mixins.less';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -132,6 +141,11 @@ body {
       cursor: pointer;
       }
     }
+}
+.loged-in-user {
+  .icon(32px, 32px);
+  cursor: pointer;
+  border-radius: 16px;
 }
 .user-logo{
   margin: 5px 30px 0 10px;

@@ -19,6 +19,8 @@
 
 <script>
 import {auth} from "@/api/authAPI"
+import store from '../store.js'
+
 export default {
    name: 'Login',
    data(){
@@ -27,20 +29,29 @@ export default {
         email: "",
         password: ""
       },
+      jwt: '',
+      store: store
     }
   },
   methods: {
     SignIn() {
+    let jwt = ''
      auth(this.email,this.password).then((response)=>{
-        console.log(response.data)
-        if (response.data){
+        return response.data
+      }).then(data => {
+        return jwt = { ...data }
+      }).then(() => {
+        console.log(jwt)
+      }).then(() => {
+        this.jwt = jwt
+      }).then(() => {
           window.location.href = 'http://localhost:8080/#/EditProfileScreen';
-         
-        }
+        localStorage.setItem("SavedToken", jwt);
+        console.log(localStorage.getItem('SavedToken'))
+        window.location.reload();
       })
-      
+    }
   }
-}
 } 
 </script>
 
