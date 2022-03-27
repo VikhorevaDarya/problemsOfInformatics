@@ -1,5 +1,4 @@
 import {$api} from "./index"
-import store from '../store.js'
 
 export const addAuthor = async(
   name,
@@ -15,7 +14,7 @@ export const addAuthor = async(
   academicDegree
   ) => {
     try {
-        const id = store.state.user.id
+        const id = localStorage.getItem('userId')
         const response = await $api.post(`/author/${id}`,{
           name,
           surname,
